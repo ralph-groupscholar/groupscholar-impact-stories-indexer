@@ -1,3 +1,4 @@
 /.gradle/
 /.gradle-dist/
 /build/
+/.kotlin/

@@ -7,6 +7,8 @@ A Kotlin CLI that captures, tags, and summarizes impact stories for Group Schola
 - Attach quantitative metrics to each story
 - Tag stories for faster retrieval
 - Generate outcome summaries for reporting
+- Produce detailed story briefs with metrics and tags
+- Summarize story volume by program
 - Seed sample data for instant usefulness
 
 ## Tech Stack
@@ -36,6 +38,8 @@ For local development, point `GS_DB_URL` to a local PostgreSQL instance. Product
 ./gradlew run --args="seed"
 ./gradlew run --args="seed --force"
 ./gradlew run --args="list-stories"
+./gradlew run --args="search-stories --program=\"Apprenticeship Pathway\" --tag=\"employment\""
+./gradlew run --args="story-brief --story-id=1"
 ./gradlew run --args="add-story --title=\"Title\" --summary=\"Summary\" --program=\"Program\" --outcome=\"Outcome\" --location=\"Location\""
 ./gradlew run --args="add-metric --story-id=1 --metric-name=\"scholars supported\" --value=12 --unit=students"
 ./gradlew run --args="list-metrics --story-id=1"
@@ -43,6 +47,8 @@ For local development, point `GS_DB_URL` to a local PostgreSQL instance. Product
 ./gradlew run --args="add-tag --label=\"first-gen\""
 ./gradlew run --args="assign-tag --story-id=1 --tag-id=2"
 ./gradlew run --args="outcome-summary"
+./gradlew run --args="program-summary"
+./gradlew run --args="export-csv --output=impact-stories.csv"
 ```
 
 ## Testing
